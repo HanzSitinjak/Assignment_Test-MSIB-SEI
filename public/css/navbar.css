@@ -1,0 +1,52 @@
+.navbar-container {
+    width: 100%;
+    height: 80px;
+    padding: 10px 0;
+    display: flex;
+    position: fixed;
+    padding-right: 100px;
+    justify-content: flex-end; /* Menempatkan navbar di sisi kanan */
+    background-color: #f25c54; /* Background putih */
+}
+
+.navbar {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 50px; /* Memberikan jarak antar item navbar */
+}
+
+.nav-item a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    position: relative;
+    padding: 5px 0;
+    transition: color 0.3s ease;
+}
+
+.nav-item a:hover {
+    color: #fed9b7; /* Warna teks saat hover */
+}
+
+.nav-item a.active, .nav-item a:hover::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: orange; /* Garis bawah berwarna orange */
+}
+
+/* Menambahkan kelas aktif pada link yang terbuka */
+.nav-item a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: orange;
+}
